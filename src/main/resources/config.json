@@ -1,0 +1,7 @@
+{
+  "maxNumberOfProviders": 10,
+  "requiredHealthyHeartbeatForEnablingProvider": 2,
+  "heartbeatIntervalMs": 2000,
+  "providerTimeoutMs": 1000,
+  "maxConcurrentRequestsPerProvider": 5
+}
