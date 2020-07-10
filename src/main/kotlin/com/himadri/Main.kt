@@ -24,7 +24,7 @@ fun main() {
 
         override suspend fun check() {
             val randomSleep = Random.nextLong(config.providerTimeoutMs * 2)
-            logger.info("${get()} unresponsive for ${randomSleep}ms")
+            logger.info("[HeartBeat] ${get()}: unresponsive for ${randomSleep}ms")
             delay(randomSleep)
         }
     }
@@ -33,7 +33,7 @@ fun main() {
         override fun get() = "Provider 2"
 
         override suspend fun check() {
-            logger.info("${get()} check")
+            logger.info("[HeartBeat] ${get()}: OK")
         }
     }
 

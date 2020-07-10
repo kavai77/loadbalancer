@@ -37,7 +37,6 @@ class HeartbeatTracker(
             withTimeout(config.providerTimeoutMs) { provider.check() }
             return true
         } catch (ex: Exception) {
-            logger.info("${provider.get()} timed out")
             return false
         }
     }
