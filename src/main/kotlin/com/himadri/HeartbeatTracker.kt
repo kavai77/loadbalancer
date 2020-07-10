@@ -17,7 +17,7 @@ class HeartbeatTracker(
         GlobalScope.launch {
             while (isActive) {
                 loadBalancer.providersIterator().forEach {
-                    checkProviderHeartbeat(it)
+                    launch { checkProviderHeartbeat(it) }
                 }
                 delay(config.heartbeatIntervalMs)
             }
